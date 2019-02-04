@@ -11,7 +11,7 @@ func TestUnmarshal(t *testing.T) {
 		LocationKey: "amazon.com",
 		Title:       "AWS",
 		Location:    "https://12345.signin.aws.amazon.com/console",
-		SecureContents: []SecureContent{{
+		SecureContents: SecureContent{
 			URLs: []URL{{
 				Label: "website",
 				URL:   "https://12345.signin.aws.amazon.com/console",
@@ -25,7 +25,7 @@ func TestUnmarshal(t *testing.T) {
 					{Kind: "string", Value: "Foo", Title: "Bar"},
 				}},
 			},
-		}},
+		},
 	}
 	str, err := json.MarshalIndent(onepif, "", "  ")
 	if err != nil {

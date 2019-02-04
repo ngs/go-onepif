@@ -1,11 +1,11 @@
 package onepif
 
 type Onepif struct {
-	LocationKey    string          `json:"locationKey,omitempty"`
-	Title          string          `json:"title,omitempty"`
-	Location       string          `json:"location,omitempty"`
-	SecureContents []SecureContent `json:"secureContents,omitempty"`
-	TypeName       string          `json:"typeName,omitempty"`
+	LocationKey    string        `json:"locationKey,omitempty"`
+	Title          string        `json:"title,omitempty"`
+	Location       string        `json:"location,omitempty"`
+	SecureContents SecureContent `json:"secureContents,omitempty"`
+	TypeName       string        `json:"typeName,omitempty"`
 }
 
 type SecureContent struct {
