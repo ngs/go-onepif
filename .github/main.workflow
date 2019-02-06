@@ -1,9 +1,9 @@
-workflow "New workflow" {
+workflow "Test" {
   on = "push"
-  resolves = ["docker://golang:1.11-alpine"]
+  resolves = ["Run tests"]
 }
 
-action "docker://golang:1.11-alpine" {
-  uses = "docker://golang:latest"
+action "Run tests" {
+  uses = "docker://golang:1.11-alpine"
   runs = "go test"
 }
